@@ -26,6 +26,19 @@ class Database
 
     function tambah_siswa($nis, $nama, $alamat)
     {
-        mysqli_query($this->conn, "INSERT INTO siswa VALUES ('$nis', '$nama', '$alamat' )");
+        mysqli_query($this->conn, "INSERT INTO siswa VALUES (NULL, '$nis', '$nama', '$alamat' )");
+    }
+
+    function edit_siswa($id)
+    {
+        $data = mysqli_query($this->conn, "SELECT * FROM siswa WHERE id='$id'");
+        $rows = mysqli_fetch_all($data, MYSQLI_ASSOC);
+
+        return $rows;
+    }
+
+    function update_siswa($id, $nis, $nama, $alamat)
+    {
+        mysqli_query($this->conn, "UPDATE `siswa` SET `nis` = '$nis', `nama` = '$nama', `alamat` = '$alamat' WHERE `siswa`.`id` = '$id'");
     }
 }
