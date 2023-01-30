@@ -47,8 +47,8 @@ $db = new Database();
                     <td><?= $siswa['alamat'] ?></td>
                     <td>
                         <a href="edit.php?id=<?= $siswa['id']?>" class="btn btn-warning btn-sm">Edit</a>
-                        <a href="" class="btn btn-danger btn-sm">Hapus</a>
-                        <a href="" class="btn btn-primary btn-sm">Show</a>
+                        <a href="proses.php?id=<?= $siswa['id']?>&aksi=hapus" class="btn btn-danger btn-sm">Hapus</a>
+                        <!-- <a href="" class="btn btn-primary btn-sm">Show</a> -->
                     </td>
                 </tr>
                 <?php
@@ -89,9 +89,9 @@ $db = new Database();
                                             data-bs-dismiss="modal">Close</button>
                                         <input type="submit" class="btn btn-primary" id="ubah" value="Save">
                                         <button type="button" class="btn btn-primary">Save changes</button>
-    </div>
-    </div>
-    </div>
+                                    </div>
+                                </div>
+                            </div>
     </div> -->
     </div>
 

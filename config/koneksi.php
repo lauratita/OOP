@@ -41,4 +41,9 @@ class Database
     {
         mysqli_query($this->conn, "UPDATE `siswa` SET `nis` = '$nis', `nama` = '$nama', `alamat` = '$alamat' WHERE `siswa`.`id` = '$id'");
     }
+
+    function hapus_siswa($id)
+    {
+        mysqli_query($this->conn, "DELETE FROM siswa WHERE id = '$id'");
+    }
 }

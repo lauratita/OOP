@@ -13,6 +13,9 @@ if($aksi == "tambah") {
     // update siswa
     $db->update_siswa($_POST['id'], $_POST['nis'], $_POST['nama'], $_POST['alamat']);
     header("location:siswa.php");
+} elseif ($aksi == "hapus") {
+    $db->hapus_siswa($_GET['id']);
+    header("location:siswa.php");
 }
 
 ?>
