@@ -12,6 +12,12 @@ class Database
     {
         $this->conn = mysqli_connect($this->host, $this->username, $this->pass);
         mysqli_select_db($this->conn, $this->db);
+
+        // if ($this->conn) {
+        //     echo "Koneksi berhasil";
+        // } else {
+        //     echo "Koneksi gagal : " . mysqli_connect_error();
+        // }
     }
 
     public function tampil_data()
